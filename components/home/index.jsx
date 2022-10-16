@@ -15,7 +15,7 @@ import sortAsc from '../../public/images/sort_by_alpha.svg'
 import sortDesc from '../../public/images/sort_by_alpha_desc.png'
 import sortGrey from '../../public/images/sort_by_alpha_grey.svg'
 import filter_alt from '../../public/images/filter_alt.svg'
-import logoTegraFood from '../../public/images/logoTegraFood.svg'
+import logo from '../../public/images/logo.svg'
 import close from '../../public/images/close.svg'
 import search from '../../public/images/search.svg'
 
@@ -155,7 +155,7 @@ const Home = () => {
 
             <div className="dropdownMenu" id='menu'>
                 <Image src={close} className='closeMenu' width={30} height={30} onClick={toogleCategory} />
-                <Image src={logoTegraFood} />
+                <Image src={logo} />
 
                 <div className='dropdownMenuButtons'>
                     <Button type='button' color='outlined' text='Todos' handleClick={() => { getCategory() }} />
