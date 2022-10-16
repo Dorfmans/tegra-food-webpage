@@ -140,7 +140,7 @@ const Signup = () => {
                     />
 
                     <Button
-                        text="Entrar"
+                        text="Cadastrar"
                         type="submit"
                         disabled={!signUpIsValid() || isSubmiting}
                     />
