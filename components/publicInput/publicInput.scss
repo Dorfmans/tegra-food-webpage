@@ -1,0 +1,29 @@
+.publicInputContainer {
+    .publicInput {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        border: 1px solid #d5d5d5;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        height: 48px;
+
+
+        input {
+            border: none;
+            outline: none;
+            color: #808080;
+            flex: 1;
+            margin-left: 12px;
+            font-size: 12px;
+            font-weight: $fontLight;
+
+            ::placeholder {
+                font-size: 12px;
+                font-weight: $fontLight;
+            }
+        }
+
+    }
+
+}

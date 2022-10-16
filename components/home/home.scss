@@ -1,0 +1,317 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 55px;
+        padding: 10px 0 10px 26px;
+        background-color: $secondaryColor;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+
+        .publicInput {
+            display: flex;
+            width: 30%;
+            top: 15%;
+            left: 15%;
+            justify-self: center;
+            position: absolute;
+
+            input {
+                width: 90%;
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+
+        .headerProfileSide {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            right: 26px;
+            justify-content: space-between;
+            height: 45px;
+            width: 150px;
+
+            .avatar {
+                width: 45px;
+                box-shadow: 1px 2px 3px 2px rgba($color: #000000, $alpha: 0.3);
+            }
+        }
+    }
+
+    .dropdownMenu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -100%;
+        height: 100%;
+        width: 50%;
+        background-color: $primaryColor;
+        padding-top: 80px;
+        z-index: 9999;
+
+        .closeMenu {
+            max-width: 30px !important;
+            min-width: 30px !important;
+            margin: 0 !important;
+            left: 10px !important;
+            top: 0 !important;
+        }
+
+        .dropdownMenuButtons {
+            margin-top: 50px;
+
+            .btn {
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+                color: #fff;
+
+            }
+        }
+
+    }
+
+    .menuOpen {
+        left: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        position: absolute;
+
+        .contentTop {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 55px;
+            margin-top: 75px;
+            margin-bottom: 20px;
+            padding: 20px 0;
+            position: fixed;
+            background-color: $backgroundColor;
+            z-index: 99;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+            .contentTopText {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 5%;
+                width: 70%;
+                position: absolute;
+                margin-left: 10px;
+
+                strong {
+                    font-size: 20px;
+                    line-height: 150%;
+                    letter-spacing: 0.5px;
+                }
+
+                .currentCategory {
+                    margin-left: 10px;
+                    text-decoration: underline 3px;
+                    text-underline-offset: 10px;
+                    color: $secondaryColor;
+                }
+            }
+
+            .contentTopIcons {
+                .sortIcon {
+                    max-height: 21px !important;
+                    min-height: 21px !important;
+                }
+
+                .priceFilterContainer {
+                    display: flex;
+                    width: 300px;
+                    height: 400px;
+                    flex-direction: column;
+                    position: fixed;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    top: 150px;
+                    right: 40px;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.05);
+                    background-color: #fff;
+                    border-radius: 15px;
+                    box-shadow: 10px 5px 3px 2px rgba($color: #000000, $alpha: 0.3);
+
+                    span {
+                        text-align: center;
+                        font-size: 14px;
+                        font-family: $fontRegular;
+                    }
+
+                    .btn {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .contentTopIcons {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                justify-content: space-around;
+                height: 40px;
+                width: 105px;
+
+            }
+        }
+
+        .cardContainer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 180px;
+            padding-bottom: 20px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        select {
+            display: flex;
+            width: 40px;
+            height: 30px;
+            position: fixed;
+            bottom: 1%;
+            z-index: 999;
+            text-align: center;
+            background-color: $backgroundColor;
+            opacity: 0.8;
+            outline: none;
+            border: 1px solid $secondaryColor;
+            border-radius: 5px;
+            color: $secondaryColor;
+        }
+
+    }
+
+    @media screen and (min-width: $desktopBreakpoint) {
+        .header {
+            .dropdown {
+                display: none;
+            }
+
+            .publicInput {
+                left: 20%;
+            }
+        }
+
+        .dropdownMenu {
+            left: 0;
+            width: 15%;
+
+            img {
+                display: flex;
+                align-self: center;
+                justify-self: center;
+            }
+
+            .closeMenu {
+                display: none !important;
+            }
+
+            .btn {
+                font-size: 18px;
+            }
+        }
+
+        .content {
+            .contentTop {
+                background-color: #fff;
+
+                .contentTopText {
+                    left: 15%;
+
+                    strong {
+                        font-size: 32px;
+                        margin-left: 10px;
+                    }
+
+                    .carrinho {
+                        position: fixed;
+                        left: 0;
+                        justify-self: flex-start;
+                    }
+                }
+
+                .contentTopIcons {
+                    .priceFilterContainer {
+                        top: 130px;
+                        right: 110px;
+                        width: 500px;
+                        height: 800px;
+                    }
+                }
+            }
+
+            .cardContainer {
+                justify-content: center;
+                width: 85%;
+                margin-left: 15%;
+
+
+                .card {
+                    width: 94%;
+                    height: 130px;
+                    margin-top: 40px;
+                    padding: 10px 40px;
+
+                    img {
+                        min-width: 120px;
+                        min-height: 120px;
+                    }
+
+                    .cardTitleAndDescription {
+                        strong {
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .cardPriceAndButton {
+                        strong {
+                            font-size: 20px;
+                        }
+
+                        .btn {
+                            width: 200px;
+                            height: 50px;
+                            align-self: flex-end;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .cartCardContainer {
+                margin-left: 0;
+                width: 95%;
+            }
+        }
+    }
+}

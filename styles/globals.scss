@@ -1,0 +1,111 @@
+@import './variables.scss';
+
+@import '../pages/login/login.scss';
+
+@import '../public/fonts/fonts.scss';
+
+@import '../components/buttons/button.scss';
+@import '../components/publicInput/publicInput.scss';
+@import '../components/googleInput/googleInput.scss';
+@import '../components/home/home.scss';
+@import '../components/card/card.scss';
+@import '../components/message/message.scss';
+
+
+* {
+  color: $contentColor;
+  font-family: $fontBold;
+  font-size: 14px;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+}
+
+strong {
+  font-family: $fontBold;
+}
+
+body {
+  background-color: $backgroundColor;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    background-color: #fff;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input {
+  background-color: transparent;
+
+  &::placeholder {
+    color: $greyColor;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $greyColor;
+  }
+
+  &::-ms-input-placeholder {
+    color: $greyColor;
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media screen and (max-width: calc($desktopBreakpoint - 1px)) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: block;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    display: none;
+  }
+}
+
+.validateMessage {
+  display: block;
+  color: $primaryColor;
+  font-size: 70%;
+  font-family: $fontLight;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 10px 0;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+
+    }
+  }
+}
+
+.desktopDeviceWidth {
+  @media screen and (min-width: $desktopBreakpoint) {
+    width: 32%;
+    margin: auto;
+  }
+}

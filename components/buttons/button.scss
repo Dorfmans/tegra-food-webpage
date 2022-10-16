@@ -1,0 +1,41 @@
+@mixin primary {
+    background-color: $selectedButonColor;
+    color: #fff;
+}
+
+@mixin outlined {
+    background-color: transparent;
+    color: $selectedButonColor;
+    border: 1px solid $selectedButonColor;
+    
+}
+
+.btn {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.primary {
+        @include primary;
+        
+        &:hover {
+            @include outlined;
+        }
+    }
+    
+    &.outlined {
+        @include outlined;
+        
+        &:hover {
+            @include primary;
+        }
+    }
+
+    &:disabled {
+    background-color: $disabledColor;
+    color: $contentColor;
+    opacity: 0.5;
+    }
+}

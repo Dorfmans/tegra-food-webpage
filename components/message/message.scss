@@ -1,0 +1,33 @@
+.messageContainer {
+    display: flex;
+    position: fixed;
+    width: 80%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    bottom: 30px;
+    background-color: $contentColor ;
+
+    span {
+        font-size: 12px;
+        font-family: $fontRegular;
+    }
+
+    .message {
+        color: #fff;
+    }
+
+    .action {
+        color: $secondaryColor;
+        text-decoration: underline;
+
+    }
+
+    @media screen and (min-width: $desktopBreakpoint) {
+        font-size: 30px;
+        width: 500px;
+        height: 80px;
+        padding: 0 20px;
+    }
+}

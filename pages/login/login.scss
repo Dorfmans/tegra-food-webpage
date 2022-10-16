@@ -1,0 +1,147 @@
+.loginPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 80%;
+    min-width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+    .welcomeContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .bemVindo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $contentColor;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+        }
+        .façaLogin {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2vh;
+            color: $greyColor;
+            font-family: $fontLight;
+            font-size: 12px;
+            line-height: 21.6px;
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    .publicPageContent {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+
+        .uploadImageContainer {
+            margin: 1vh 0;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            
+            .avatarPreview {
+                height: 120px;
+                width: 120px;
+            }
+            
+                &::after {
+                    content: url(/images/camera.svg);
+                    width: 48px;
+                    height: 48px;
+                    position: absolute;
+                    right: 0;
+                    left: 90px;
+                    margin: auto;
+                    bottom: 0;
+                }
+            
+        }
+
+        form {
+            width: 100%;
+
+            .publicInput {
+
+                input {  
+                    font-family: $fontLight;
+                    
+                    ::placeholder {
+                        font-family: $fontLight;
+                    }
+                }
+            }
+
+            .btn {
+                height: 48px;
+            }
+        }
+    
+        .lineOuLine {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin: 20px 0px;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0.5%;
+            color: $greyColor;
+            div {
+                display: flex;
+                width: 40%;
+                opacity: 0.07;
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+    .publicPageFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        p { 
+            font-size: 12px;
+            color: $greyColor;
+            a {
+                font-size: 12px;
+                text-decoration: none;
+                color: $textLinkColor;
+            }
+        }
+    }
+    @media screen and (min-width: $desktopBreakpoint) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        height: 100%;
+        
+        .logoContainer {
+            display: flex;
+            flex: 4;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .publicPageContent{
+            flex: 6;
+            height: 100%;
+            form{
+                width: 50%;
+            }
+        }
+    }
+}
