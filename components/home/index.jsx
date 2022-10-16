@@ -15,7 +15,7 @@ import sortAsc from '../../public/images/sort_by_alpha.svg'
 import sortDesc from '../../public/images/sort_by_alpha_desc.png'
 import sortGrey from '../../public/images/sort_by_alpha_grey.svg'
 import filter_alt from '../../public/images/filter_alt.svg'
-import logoTegraFood from '../../public/images/Logo TegraFood.svg'
+import logoTegraFood from '../../public/images/LogoTegraFood.svg'
 import close from '../../public/images/close.svg'
 import search from '../../public/images/search.svg'
 

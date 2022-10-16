@@ -5,7 +5,6 @@ import Image from 'next/image'
 import UserService from '../../services/UserService'
 
 import Avatar from '../../components/avatar'
-import Button from '../../components/buttons'
 import Card from '../../components/card'
 
 import home from '../../public/images/home.svg'
